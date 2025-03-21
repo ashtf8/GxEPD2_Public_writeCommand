@@ -28,7 +28,7 @@ class GxEPD2_310_GDEQ031T10 : public GxEPD2_EPD
     static const bool hasPartialUpdate = true;
     static const bool usePartialUpdateWindow = true; // set false for better image
     static const bool hasFastPartialUpdate = true; // set this false to force full refresh always
-    static const bool useFastFullUpdate = true; // set false for extended (low) temperature range, 1015000us vs 3082001us
+    static volatile bool useFastFullUpdate;// = true; // set false for extended (low) temperature range, 1015000us vs 3082001us
     static const uint16_t power_on_time = 50; // ms, e.g. 45000us
     static const uint16_t power_off_time = 50; // ms, e.g. 45000us
     static const uint16_t full_refresh_time = 1100; // ms, e.g. 1015000us
